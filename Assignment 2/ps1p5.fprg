@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 08:12:01 PM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMDE7MDg6MDA6MzMgUE07Mjg3Mg=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMDE7MDg6MTI6MDEgUE07MTsyOTc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="finalprice" type="Real" array="False" size=""/>
+            <declare name="priceoff" type="Real" array="False" size=""/>
+            <input variable="price"/>
+            <input variable="discount"/>
+            <assign variable="priceoff" expression="price * discount"/>
+            <assign variable="finalprice" expression="price - priceoff"/>
+            <output expression="&quot;The $&quot; &amp; price &amp; &quot; item with a &quot; &amp; (discount * 100) &amp; &quot;% discount is $&quot; &amp; finalprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
