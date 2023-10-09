@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 08:13:30 PM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMDg7MDg6MDk6NDkgUE07Mjg5NQ=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMDg7MDg6MTM6MzAgUE07MTsyOTg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jobamount" type="Real" array="False" size=""/>
+            <declare name="split" type="Real" array="False" size=""/>
+            <input variable="jobamount"/>
+            <assign variable="split" expression="jobamount / 3"/>
+            <output expression="&quot;You guys earned a total of $&quot;  &amp; jobamount &amp; &quot; you each recieve $&quot; &amp; split" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 08:24:01 PM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMDg7MDg6MTM6MzYgUE07Mjg4Ng=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMDg7MDg6MjQ6MDEgUE07MTsyOTg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="make" type="String" array="False" size=""/>
+            <declare name="model" type="String" array="False" size=""/>
+            <declare name="msrp" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="priceoff" type="Real" array="False" size=""/>
+            <declare name="finalprice" type="Real" array="False" size=""/>
+            <input variable="make"/>
+            <input variable="model"/>
+            <input variable="msrp"/>
+            <input variable="discount"/>
+            <assign variable="priceoff" expression="msrp * discount"/>
+            <assign variable="finalprice" expression="msrp - priceoff"/>
+            <output expression="&quot;You're looking at a &quot; &amp; make &amp; &quot; &quot; &amp; model &amp; &quot; that costs $&quot; &amp; msrp &amp; &quot;, with a %&quot; &amp; discount * 100 &amp; &quot; off discount, that takes off $&quot; &amp; priceoff &amp; &quot; for a final price of $&quot; &amp; finalprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 08:09:44 PM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMDg7MDg6MDY6NTEgUE07Mjg4NQ=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMDg7MDg6MDk6NDQgUE07MTsyOTk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="midterm" type="Real" array="False" size=""/>
+            <declare name="final" type="Real" array="False" size=""/>
+            <declare name="score" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="midterm"/>
+            <input variable="final"/>
+            <assign variable="score" expression="midterm + final"/>
+            <output expression="lastname &amp; &quot;, You scored a total of &quot; &amp; score &amp; &quot; points.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
