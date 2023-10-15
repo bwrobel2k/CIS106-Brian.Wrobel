@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 03:40:06 PM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMTU7MDM6Mjk6NDYgUE07Mjg4Nw=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMTU7MDM6NDA6MDYgUE07MTsyOTg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstexam" type="Integer" array="False" size=""/>
+            <declare name="secondexam" type="Integer" array="False" size=""/>
+            <input variable="firstexam"/>
+            <input variable="secondexam"/>
+            <assign variable="firstexam" expression="firstexam * .6"/>
+            <assign variable="secondexam" expression="secondexam * .4"/>
+            <declare name="finalscore" type="Integer" array="False" size=""/>
+            <assign variable="finalscore" expression="firstexam + secondexam"/>
+            <output expression="&quot;Total points are &quot; &amp; finalscore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 04:27:15 PM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMTU7MDQ6MDg6MzQgUE07Mjg4Mg=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMTU7MDQ6Mjc6MTUgUE07MTsyOTkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="meal" type="Real" array="False" size=""/>
+            <declare name="mealtip1" type="Real" array="False" size=""/>
+            <declare name="mealtip2" type="Real" array="False" size=""/>
+            <input variable="meal"/>
+            <output expression="&quot;With 15% Tip:&quot;" newline="True"/>
+            <output expression="&quot;Total: $&quot; &amp; meal" newline="True"/>
+            <output expression="&quot;Tip: $&quot; &amp; meal * .15" newline="True"/>
+            <output expression="&quot;Total with Tip: $&quot; &amp; (meal * .15) + meal" newline="True"/>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;With 18% Tip:&quot;" newline="True"/>
+            <output expression="&quot;Total: $&quot; &amp; meal" newline="True"/>
+            <output expression="&quot;Tip: $&quot; &amp; meal * .18" newline="True"/>
+            <output expression="&quot;Total with Tip: $&quot; &amp; (meal * .18) + meal" newline="True"/>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;With 20% Tip:&quot;" newline="True"/>
+            <output expression="&quot;Total: $&quot; &amp; meal" newline="True"/>
+            <output expression="&quot;Tip: $&quot; &amp; meal * .2" newline="True"/>
+            <output expression="&quot;Total with Tip: $&quot; &amp; (meal * .2) + meal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

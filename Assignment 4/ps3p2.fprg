@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-15 04:08:24 PM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMTU7MDM6NDA6MTAgUE07Mjg3MQ=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTAtMTU7MDQ6MDg6MjQgUE07MjsyOTkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="priceper" type="Real" array="False" size=""/>
+            <declare name="curprice" type="Real" array="False" size=""/>
+            <declare name="qtystock" type="Real" array="False" size=""/>
+            <declare name="final" type="Real" array="False" size=""/>
+            <input variable="priceper"/>
+            <input variable="curprice"/>
+            <input variable="qtystock"/>
+            <assign variable="final" expression="(curprice - priceper) * qtystock"/>
+            <output expression="&quot;You currently have made $&quot; &amp; final &amp; &quot; in this stock&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
