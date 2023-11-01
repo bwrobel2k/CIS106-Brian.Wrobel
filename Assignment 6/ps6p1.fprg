@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-01 12:26:16 AM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDE7MTI6MTQ6MTMgQU07Mjg1Ng=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDE7MTI6MjY6MTYgQU07MTsyOTcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="widgets" type="Integer" array="False" size=""/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <input variable="widgets"/>
+            <if expression="widgets &gt; 10000">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="widgets &gt;= 5000">
+                        <then>
+                            <assign variable="price" expression="20"/>
+                        </then>
+                        <else>
+                            <assign variable="price" expression="30"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <assign variable="tax" expression=".07"/>
+            <assign variable="extprice" expression="widgets * price"/>
+            <assign variable="total" expression="extprice * tax + extprice"/>
+            <output expression="&quot;Your extended price is: $&quot; &amp; extprice" newline="True"/>
+            <output expression="&quot;Your tax is: %&quot; &amp; tax * 100" newline="True"/>
+            <output expression="&quot;Your total is: $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

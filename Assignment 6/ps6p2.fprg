@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-01 12:44:00 AM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDE7MTI6MjY6MzYgQU07Mjg2NA=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDE7MTI6NDQ6MDAgQU07MTsyOTYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="partnum" type="Integer" array="False" size=""/>
+            <declare name="quanity" type="Integer" array="False" size=""/>
+            <declare name="unitcost" type="Integer" array="False" size=""/>
+            <input variable="partnum"/>
+            <input variable="quanity"/>
+            <if expression="partnum == 99">
+                <then>
+                    <assign variable="unitcost" expression="2"/>
+                </then>
+                <else>
+                    <if expression="partnum == 10 OR partnum == 55">
+                        <then>
+                            <assign variable="unitcost" expression="1"/>
+                        </then>
+                        <else>
+                            <if expression="partnum == 80 OR partnum == 70">
+                                <then>
+                                    <assign variable="unitcost" expression="3"/>
+                                </then>
+                                <else>
+                                    <assign variable="unitcost" expression="5"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Your part number is #&quot; &amp; partnum" newline="True"/>
+            <output expression="&quot;Your cost per unit is $&quot; &amp; unitcost" newline="True"/>
+            <output expression="&quot;Your total cost is $&quot; &amp; unitcost * quanity" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

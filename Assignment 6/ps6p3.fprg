@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-01 12:52:10 AM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDE7MTI6NDQ6MDQgQU07Mjg1OQ=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDE7MTI6NTI6MTAgQU07MTsyOTYz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="principle" type="Integer" array="False" size=""/>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <declare name="intrest" type="Real" array="False" size=""/>
+            <input variable="principle"/>
+            <input variable="year"/>
+            <if expression="principle &gt; 100000 AND year == 5">
+                <then>
+                    <assign variable="intrest" expression=".06"/>
+                </then>
+                <else>
+                    <if expression="principle &gt;= 50000 AND year == 10">
+                        <then>
+                            <assign variable="intrest" expression=".05"/>
+                        </then>
+                        <else>
+                            <if expression="principle &gt;= 50000 AND year == 5">
+                                <then>
+                                    <assign variable="intrest" expression=".04"/>
+                                </then>
+                                <else>
+                                    <assign variable="intrest" expression=".02"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Your principle is: $&quot; &amp; principle" newline="True"/>
+            <output expression="&quot;Your intrest is: &quot; &amp; intrest * 100 &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;Your estimated intrest earning in year one is : $&quot; &amp; principle * intrest" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
