@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-07 03:58:29 AM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDc7MDM6NDA6MDIgQU07Mjg1OQ=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDc7MDM6NTg6MjkgQU07MTsyOTg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="continue" type="String" array="False" size=""/>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="overtime" type="Integer" array="False" size=""/>
+            <declare name="payrate" type="Real" array="False" size=""/>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <declare name="totalgross" type="Real" array="False" size=""/>
+            <assign variable="totalgross" expression="0"/>
+            <declare name="numemployee" type="Integer" array="False" size=""/>
+            <assign variable="numemployee" expression="0"/>
+            <input variable="continue"/>
+            <while expression="continue = &quot;Yes&quot;">
+                <input variable="lname"/>
+                <input variable="hours"/>
+                <input variable="payrate"/>
+                <if expression="hours &gt; 40">
+                    <then>
+                        <assign variable="overtime" expression="hours - 40"/>
+                        <assign variable="hours" expression="40"/>
+                        <assign variable="grosspay" expression="(hours * payrate) + (overtime * (payrate/2 +payrate))"/>
+                    </then>
+                    <else>
+                        <assign variable="grosspay" expression="hours * payrate"/>
+                    </else>
+                </if>
+                <output expression="&quot;Hello: &quot; &amp; lname" newline="True"/>
+                <output expression="&quot;Your pay this week is: $&quot; &amp; grosspay" newline="True"/>
+                <assign variable="numemployee" expression="numemployee+1"/>
+                <assign variable="totalgross" expression="grosspay + totalgross"/>
+                <input variable="continue"/>
+            </while>
+            <output expression="&quot;The sum of all gross pay: $&quot; &amp; totalgross" newline="True"/>
+            <output expression="&quot;The number of employees: &quot; &amp; numemployee" newline="True"/>
+            <output expression="&quot;The average pay is: $&quot; &amp; totalgross/numemployee" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="brian"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-07 03:39:55 AM"/>
+        <attribute name="created" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDc7MDM6MjA6MjggQU07Mjg2NQ=="/>
+        <attribute name="edited" value="YnJpYW47REVTS1RPUC1HSkpEUTJQOzIwMjMtMTEtMDc7MDM6Mzk6NTUgQU07MTsyOTgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="continue" type="String" array="False" size=""/>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="test1" type="Integer" array="False" size=""/>
+            <declare name="test2" type="Integer" array="False" size=""/>
+            <declare name="average" type="Integer" array="False" size=""/>
+            <declare name="numstudents" type="Integer" array="False" size=""/>
+            <assign variable="numstudents" expression="0"/>
+            <input variable="continue"/>
+            <while expression="continue = &quot;Yes&quot;">
+                <input variable="lname"/>
+                <input variable="test1"/>
+                <input variable="test2"/>
+                <assign variable="average" expression="(test1+test2)/2"/>
+                <assign variable="numstudents" expression="numstudents + 1"/>
+                <output expression="&quot;Hello: &quot; &amp; lname" newline="True"/>
+                <output expression="&quot;Test average: &quot; &amp; average" newline="True"/>
+                <output expression="&quot;Number of student data: &quot; &amp; numstudents" newline="True"/>
+                <input variable="continue"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
